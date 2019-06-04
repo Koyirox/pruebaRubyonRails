@@ -1,12 +1,24 @@
+<br>
 <h3>el show<h3>
+<div class="card" style="width: 100%;">
+    <div class="card-body text-center">
+        
 
-<%= @todo.description %>
-<% if @todo.completed %>
-<p> tarea finalizada </p>
-<% else %>
+         <%= @todo.description %>
+         <% if @todo.completed %>
+         <p> tarea finalizada </p>
+        <% else %>
 
-<p> tarea aun no finalizada </p>
+         <p> tarea aun no finalizada </p>
 
-<% end %>
+         <% end %>
+
+  </div>
+</div>
 
 <%= link_to 'volver', todos_path %>
+
+
+ 
+
+
