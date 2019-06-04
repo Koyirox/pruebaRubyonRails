@@ -1,0 +1,26 @@
+<h3>todos los las cosas que quieres hacer </h3>
+
+<% @todos.each do |todo| %>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+
+     <p class="card-text"> <%= todo.description %> </p>
+     <p class="card-text">  <%= todo.completed %> </p>
+     <a href="#" class="btn btn-primary">Go somewhere</a>
+     <%= link_to 'mostrar', todo %>
+
+    </div>
+
+</div>
+
+
+ 
+<% end %>
+
+<%= link_to 'nueva Tarea', todos_new_path  %>
+
+
+
+
+
+

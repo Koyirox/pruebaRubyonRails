@@ -1,0 +1,12 @@
+<h3>el show<h3>
+
+<%= @todo.description %>
+<% if @todo.completed %>
+<p> tarea finalizada </p>
+<% else %>
+
+<p> tarea finalizada </p>
+
+<% end %>
+
+<%= link_to 'volver', todos_path %>
