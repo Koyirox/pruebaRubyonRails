@@ -1,13 +1,16 @@
 <h3>todos los las cosas que quieres hacer </h3>
 
 <% @todos.each do |todo| %>
+<br>
 <div class="card" style="width: 18rem;">
     <div class="card-body">
 
      <p class="card-text"> <%= todo.description %> </p>
-     <p class="card-text">  <%= todo.completed %> </p>
-     <a href="#" class="btn btn-primary">Go somewhere</a>
-     <%= link_to 'mostrar', todo %>
+     <%# <p class="card-text">  <%= todo.completed </p> %>
+     <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+     <%= link_to 'mostrar', todo, class:'btn btn-secondary' %>
+     <%= link_to 'editar', todo_edit_path(todo), class: 'btn btn-secondary' %>
+     <%= link_to 'Borrar', todo, method: :delete, class: 'btn btn-danger' %>
 
     </div>
 
@@ -16,8 +19,8 @@
 
  
 <% end %>
-
-<%= link_to 'nueva Tarea', todos_new_path  %>
+<br>
+<%= link_to 'nueva Tarea', todos_new_path, class: 'btn btn-success' %>
 
 
 
